@@ -1,0 +1,69 @@
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('show');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href.length > 1 && href.startsWith('#')) {
+        e.preventDefault();
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        nav.classList.remove('show');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeBtn = modal.querySelector('.close');
+
+  document.querySelectorAll('.card-img, .hero-img, .rounded').forEach(img => {
+    img.addEventListener('click', (e) => {
+      const src = e.currentTarget.getAttribute('src');
+      const alt = e.currentTarget.getAttribute('alt') || '';
+      modalImg.src = src;
+      modalImg.alt = alt;
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    modalImg.src = '';
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeBtn.click();
+    }
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const onScroll = () => {
+    const top = window.innerHeight * 0.85;
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < top) {
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  revealEls.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(14px)';
+    el.style.transition = 'opacity .6s ease, transform .6s ease';
+  });
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
