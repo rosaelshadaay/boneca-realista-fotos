@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fdfcf8; /* fundo marfim suave */
+      background-color: #fdfcf8; /* fundo marfim */
       color: #3d0066;
       text-align: center;
     }
@@ -37,14 +37,23 @@
       padding: 30px;
     }
     .card {
-      background: #fff;
+      background: #fffaf0; /* fundo marfim claro */
       border: 2px solid gold;
       border-radius: 10px;
-      padding: 15px;
+      padding: 20px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
+    .card h3 {
+      margin: 10px 0;
+      color: #3d0066;
+    }
+    .card p {
+      color: #444;
+      font-size: 0.9rem;
     }
     .contatos {
       margin: 30px auto;
@@ -80,22 +89,18 @@
     <h2>Nossas Categorias</h2>
     <div class="categorias">
       <div class="card">
-        <img src="foto1.jpg" alt="Bonecas baseadas em foto">
         <h3>Baseadas em Foto</h3>
         <p>Bonecas feitas a partir de fotos reais, com riqueza de detalhes.</p>
       </div>
       <div class="card">
-        <img src="foto2.jpg" alt="Bonecas para brincar">
         <h3>Bonecas para Brincar</h3>
         <p>Bonecas seguras e fofas, perfeitas para crianças.</p>
       </div>
       <div class="card">
-        <img src="foto3.jpg" alt="Bonecas modeladas">
         <h3>Modeladas e Estruturadas</h3>
         <p>Bonecas especiais, com estrutura e modelagem exclusiva.</p>
       </div>
       <div class="card">
-        <img src="foto4.jpg" alt="Bonecos temáticos">
         <h3>Bonecos Temáticos</h3>
         <p>Natal, personagens e outras criações temáticas.</p>
       </div>
