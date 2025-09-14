@@ -1,149 +1,82 @@
-:root{
-  --bg:#f3eef8;
-  --purple:#C8A2C8;
-  --marfim:#FFF8DC;
-  --gold:#FFD700;
-  --text:#2b2b2b;
-  --muted:#6b6b6b;
-  --radius:12px;
-  --container:1100px;
-  --glass: rgba(255,255,255,0.75);
-  --shadow: 0 6px 24px rgba(16,24,40,0.08);
-  font-synthesis: none;
+/* ======== ESTILO BASE ======== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
+  margin: 0;
+  text-align: center;
+  color: #3d0066;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg, var(--bg) 0%, #f7f3fb 100%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
+
+/* ======== CABEÇALHO ======== */
+header {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-bottom: 5px solid gold;
 }
-.skip-link{position: absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#111; color:#fff; z-index:9999; border-radius:6px}
-.wrap{max-width:var(--container);margin:0 auto;padding:28px}
-.header{background:transparent;position:sticky;top:0;z-index:50;backdrop-filter: blur(6px)}
-.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-.logo{width:86px;height:auto;border-radius:8px;object-fit:cover;box-shadow:var(--shadow)}
-.brand-name{font-family:'Playfair Display', serif;font-weight:700;color:var(--gold);letter-spacing:1px;font-size:1.25rem;display:block}
-.brand-sub{display:block;font-size:.75rem;color:var(--muted)}
-.nav{display:flex;align-items:center}
-.nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
-.nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-.nav a:hover{background:var(--glass)}
-.nav-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:4px 0;border-radius:2px}
-.hero{padding:56px 0}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-.hero-left h1{font-family:'Playfair Display', serif;font-size:2rem;color:var(--purple);margin:0 0 12px}
-.lead{color:var(--muted);margin-bottom:18px}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .18s ease, box-shadow .18s ease}
-.btn.primary{background:var(--purple);color:white;box-shadow:0 8px 24px rgba(200,162,200,0.12)}
-.btn.primary:hover{transform:translateY(-3px)}
-.btn.ghost{background:transparent;border:2px solid var(--marfim);color:var(--text)}
-.btn.outline{background:transparent;border:2px dashed rgba(0,0,0,0.06);color:var(--text);}
-.quick-list{list-style:none;padding-left:0;margin-top:16px;color:var(--muted);font-size:.95rem}
-.quick-list a{color:var(--text);text-decoration:underline}
-.hero-card{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(180deg, #fff, rgba(255,255,255,0.9));box-shadow:var(--shadow);padding:12px}
-.hero-img{width:100%;display:block;border-radius:8px;object-fit:cover}
-.badge{position:absolute;left:12px;bottom:12px;background:var(--marfim);color:#1a1a1a;padding:8px 10px;border-radius:999px;font-weight:700}
-.section{padding:56px 0}
-.section h2{font-family:'Playfair Display', serif;color:var(--gold);margin-bottom:8px}
-.section-sub{color:var(--muted);margin-bottom:20px}
-.two-col{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
-.rounded{width:100%;border-radius:12px;box-shadow:var(--shadow);object-fit:cover}
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.9), #fff);border-radius:14px;padding:12px;box-shadow:var(--shadow);transition:transform .18s}
-.card:hover{transform:translateY(-6px)}
-.card-img{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:10px}
-.card h3{margin:6px 0;color:var(--purple)}
-.card p{color:var(--muted);font-size:.95rem}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
-.contact-card{background:var(--glass);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
-.footer{background:linear-gradient(180deg,#f6f0ff,#efe9ff);padding:18px 0;border-top:1px solid rgba(0,0,0,0.03)}
-.footer .footer-grid{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.footer a{color:var(--text);text-decoration:underline}
-.image-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:1200;padding:18px}
-.image-modal img{max-width:95%;max-height:85%;border-radius:8px;box-shadow:0 16px 48px rgba(0,0,0,0.6)}
-.image-modal .close{position:absolute;right:18px;top:18px;background:var(--marfim);border:0;padding:8px 10px;border-radius:8px;font-weight:700}
-.hidden{display:none}
-.muted{color:var(--muted);font-size:.95rem}
-@media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr}
-  .two-col{grid-template-columns:1fr}
-  .nav{position:fixed;right:0;top:72px;background:var(--bg);height:calc(100vh - 72px);width:260px;padding:18px;transform:translateX(100%);transition:transform .25s}
-  .nav.show{transform:translateX(0)}
-  .nav ul{flex-direction:column;gap:8px}
-  .nav-toggle{display:block}
-  .header .wrap{padding:12px}
-  .logo{width:68px}
-}
-@media (max-width:520px){
-  .wrap{padding:16px}
-  .hero-left h1{font-size:1.35rem}
-  .hero-img{height:260px}
-                }
-/* Estilo da logo */
+
 .logo {
   display: block;
-  margin: 0 auto 15px;   /* centralizada e com espaço embaixo */
-  max-width: 150px;      /* tamanho padrão (celular) */
+  margin: 0 auto 15px;
+  max-width: 150px;   /* celular */
   height: auto;
-  border-radius: 10px;   /* cantos arredondados */
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2); /* sombra suave */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Ajuste para telas maiores (computador) */
 @media (min-width: 768px) {
   .logo {
-    max-width: 250px;   /* aumenta em telas grandes */
+    max-width: 250px; /* aumenta no PC */
   }
 }
-/* Estilo dos títulos */
+
+/* ======== TÍTULOS ======== */
 h1, h2, h3 {
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  color: #3d0066; /* roxo da sua paleta */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* leve sombra */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
   margin-bottom: 15px;
 }
 
-/* Ajuste responsivo para títulos */
 @media (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem; /* maior no computador */
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
 }
 
 @media (max-width: 767px) {
-  h1 {
-    font-size: 1.8rem; /* menor no celular */
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
 }
 
-/* Estilo dos botões de contato */
+/* ======== CATEGORIAS ======== */
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background: #fffaf0;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ======== BOTÕES DE CONTATO ======== */
+.contatos {
+  margin: 30px auto;
+}
+
 .contatos a {
   display: inline-block;
   margin: 8px;
   padding: 12px 18px;
-  font-size: 1rem;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
@@ -151,84 +84,30 @@ h1, h2, h3 {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Efeitos ao passar o mouse */
 .contatos a:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* Ajuste responsivo para botões */
+.whatsapp { background-color: #25D366; }
+.instagram { background-color: #E1306C; }
+.facebook { background-color: #1877F2; }
+.email { background-color: goldenrod; }
+
 @media (min-width: 768px) {
   .contatos a {
     font-size: 1.1rem;
     padding: 14px 22px;
   }
 }
-/* Estilo dos títulos */
-h1, h2, h3 {
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  color: #3d0066; /* roxo da sua paleta */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* leve sombra */
-  margin-bottom: 15px;
-}
 
-/* Ajuste responsivo para títulos */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem; /* maior no computador */
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 1.8rem; /* menor no celular */
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
-}
-
-/* Estilo dos botões de contato */
-.contatos a {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 18px;
-  font-size: 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
+/* ======== RODAPÉ ======== */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #3d0066;
   color: white;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-top: 3px solid gold;
 }
 
-/* Efeitos ao passar o mouse */
-.contatos a:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* Ajuste responsivo para botões */
-@media (min-width: 768px) {
-  .contatos a {
-    font-size: 1.1rem;
-    padding: 14px 22px;
-  }
-}
-
-/* Fundo degradê para o site */
-body {
-  background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
-  /* roxo claro → marfim → dourado */
-  background-attachment: fixed; /* mantém o degradê fixo ao rolar a página */
-}
 
