@@ -87,7 +87,8 @@ body{
   .wrap{padding:16px}
   .hero-left h1{font-size:1.35rem}
   .hero-img{height:260px}
-                } /* Estilo da logo */
+                }
+/* Estilo da logo */
 .logo {
   display: block;
   margin: 0 auto 15px;   /* centralizada e com espaço embaixo */
@@ -103,4 +104,125 @@ body{
     max-width: 250px;   /* aumenta em telas grandes */
   }
 }
+/* Estilo dos títulos */
+h1, h2, h3 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #3d0066; /* roxo da sua paleta */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* leve sombra */
+  margin-bottom: 15px;
+}
+
+/* Ajuste responsivo para títulos */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* maior no computador */
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem; /* menor no celular */
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilo dos botões de contato */
+.contatos a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efeitos ao passar o mouse */
+.contatos a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Ajuste responsivo para botões */
+@media (min-width: 768px) {
+  .contatos a {
+    font-size: 1.1rem;
+    padding: 14px 22px;
+  }
+}
+/* Estilo dos títulos */
+h1, h2, h3 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #3d0066; /* roxo da sua paleta */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* leve sombra */
+  margin-bottom: 15px;
+}
+
+/* Ajuste responsivo para títulos */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* maior no computador */
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem; /* menor no celular */
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilo dos botões de contato */
+.contatos a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efeitos ao passar o mouse */
+.contatos a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Ajuste responsivo para botões */
+@media (min-width: 768px) {
+  .contatos a {
+    font-size: 1.1rem;
+    padding: 14px 22px;
+  }
+}
+
 
