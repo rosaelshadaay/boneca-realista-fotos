@@ -1,178 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elshadday — Bonecas de Pano Realistas</title>
-  <meta name="description" content="Elshadday — Bonecas de pano realistas baseadas em fotos. Bonecas para brincar, modeladas, estruturadas, bonecas baseadas em foto e bonecos temáticos (Natal e personagens). Contato: WhatsApp 51 98107-1761." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d8c7f0; /* roxo claro */
+      color: #3d0066;
+      text-align: center;
+    }
+    header {
+      background-color: #fffaf0; /* amarelo marfim */
+      padding: 20px;
+      border-bottom: 5px solid gold;
+    }
+    header img {
+      max-width: 200px;
+    }
+    h1 {
+      color: #3d0066;
+      margin-top: 10px;
+    }
+    .contatos {
+      margin: 30px auto;
+    }
+    .contatos a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      color: white;
+    }
+    .whatsapp { background-color: #25D366; }
+    .instagram { background-color: #E1306C; }
+    .facebook { background-color: #1877F2; }
+    .email { background-color: goldenrod; }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #3d0066;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Ir para conteúdo</a>
-
-  <header class="header">
-    <div class="wrap">
-      <a class="brand" href="#top">
-        <img src="logo.png" alt="Logo Elshadday Bonecas Realista" class="logo">
-        <div class="brand-text">
-          <span class="brand-name">ELSHADDAY</span>
-          <small class="brand-sub">Bonecas de Pano Realistas</small>
-        </div>
-      </a>
-
-      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="#main">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#bonecas">Bonecas</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <!-- Logo já está no repositório -->
+    <img src="1000061260.png" alt="Logo Elshadday Bonecas">
+    <h1>Elshadday Bonecas de Pano Realistas</h1>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-left">
-          <h1 id="hero-title">Bonecas de pano realistas baseadas em fotos, feitas com amor e detalhes únicos.</h1>
-          <p class="lead">Elshadday cria bonecas para brincar, modeladas e estruturadas — peças artesanais inspiradas em pessoas e memórias. Encomende a sua boneca personalizada hoje.</p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="#bonecas">Ver Nossas Bonecas</a>
-            <a class="btn ghost" href="#contato">Entre em Contato</a>
-          </div>
+  <main>
+    <h2>Bem-vinda(o) ao nosso ateliê 💜</h2>
+    <p>Bonecas de pano realistas, feitas à mão com carinho e dedicação.</p>
 
-          <ul class="quick-list" aria-hidden="true">
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/551981071761" target="_blank" rel="noopener">51 98107-1761</a></li>
-            <li><strong>Instagram:</strong> <a href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank" rel="noopener">@elshaddaybonecasdepanorealista</a></li>
-          </ul>
-        </div>
-
-        <div class="hero-right" aria-hidden="true">
-          <!-- espaço para imagem destaque -->
-          <div class="hero-card">
-            <img src="assets/destaque.jpg" alt="Boneca destaque Elshadday (substitua por sua imagem)" class="hero-img">
-            <div class="badge">Feito à mão • Encomendas</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="section wrap reveal">
-      <div class="two-col">
-        <div>
-          <h2>Sobre Elshadday</h2>
-          <p>Sou Rosa Gleci Balem — apaixonada por criar bonecas realistas de pano, baseadas em fotos e memórias. Faço cada boneca com atenção aos detalhes: textura, expressão e roupa, para que sejam companheiras especiais de brincadeiras e recordações.</p>
-          <p class="muted">No momento, trabalho apenas com bonecas de pano realistas; futuramente ampliaremos para moldes, roupas, sapatos e acessórios.</p>
-          <a class="btn outline" href="#contato">Encomende a sua</a>
-        </div>
-        <div>
-          <img src="assets/sobre.jpg" alt="Rosa Gleci Balem trabalhando nas bonecas" class="rounded">
-        </div>
-      </div>
-    </section>
-
-    <!-- BONECAS / CATEGORIAS -->
-    <section id="bonecas" class="section wrap reveal">
-      <h2>Nosso Acervo de Bonecas</h2>
-      <p class="section-sub">Conheça as categorias — cada boneca é personalizada e feita manualmente.</p>
-
-      <div class="grid-3">
-        <article class="card">
-          <img src="assets/brincar.jpg" alt="Bonecas para brincar" class="card-img">
-          <h3>Bonecas para brincar</h3>
-          <p>Bonecas pensadas para o brincar infantil, com tecidos resistentes e acabamento seguro.</p>
-        </article>
-
-        <article class="card">
-          <img src="assets/modeladas.jpg" alt="Bonecas modeladas" class="card-img">
-          <h3>Bonecas modeladas</h3>
-          <p>Modelagens customizadas com traços faciais mais realistas e expressivos.</p>
-        </article>
-
-        <article class="card">
-          <img src="assets/estruturadas.jpg" alt="Bonecas estruturadas" class="card-img">
-          <h3>Bonecas estruturadas</h3>
-          <p>Estruturas internas para poses e estabilidade, ideais para colecionadores.</p>
-        </article>
-
-        <article class="card">
-          <img src="assets/basadas-fotos.jpg" alt="Bonecas baseadas em fotos" class="card-img">
-          <h3>Bonecas baseadas em fotos</h3>
-          <p>Criamos bonecas a partir de fotografias (fotos enviadas pelo cliente) para resgatar memórias e rostos queridos.</p>
-        </article>
-
-        <article class="card">
-          <img src="assets/tematicos.jpg" alt="Bonecos temáticos - Natal e personagens" class="card-img">
-          <h3>Bonecos temáticos</h3>
-          <p>Versões temáticas para Natal, personagens e ocasiões especiais — perfeitos como presente.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section wrap reveal">
-      <h2>Contato</h2>
-      <p class="section-sub">Fale comigo para encomendar ou tirar dúvidas.</p>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>WhatsApp</h3>
-          <p><a href="https://wa.me/551981071761" target="_blank" rel="noopener">51 98107-1761</a></p>
-          <a class="btn primary" href="https://wa.me/551981071761" target="_blank" rel="noopener">Abrir WhatsApp</a>
-        </div>
-
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p><a href="mailto:rosaglecibalem@gmail.com">rosaglecibalem@gmail.com</a></p>
-          <a class="btn outline" href="mailto:rosaglecibalem@gmail.com">Enviar Email</a>
-        </div>
-
-        <div class="contact-card">
-          <h3>Redes</h3>
-          <p>
-            <a href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank" rel="noopener">Instagram</a><br>
-            <a href="https://facebook.com/RosaGleciBalem" target="_blank" rel="noopener">Facebook</a>
-          </p>
-          <div class="socials">
-            <a class="icon" href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-            <a class="icon" href="https://facebook.com/RosaGleciBalem" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="contatos">
+      <a class="whatsapp" href="https://wa.me/5551981071761" target="_blank">WhatsApp</a>
+      <a class="instagram" href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank">Instagram</a>
+      <a class="facebook" href="https://facebook.com/RosaGleciBalem" target="_blank">Facebook</a>
+      <a class="email" href="mailto:rosaglecibalem@gmail.com">E-mail</a>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-grid">
-      <div>
-        <strong>ELSHADDAY</strong><br>
-        Bonecas de Pano Realistas
-      </div>
-      <div>
-        <p>© <span id="year"></span> Elshadday Bonecas Realista — Todos os direitos reservados.</p>
-      </div>
-      <div>
-        <p>WhatsApp: <a href="https://wa.me/551981071761" rel="noopener">51 98107-1761</a></p>
-      </div>
-    </div>
+  <footer>
+    <p>&copy; 2025 Elshadday Bonecas de Pano Realistas</p>
   </footer>
-
-  <div id="image-modal" class="image-modal hidden" aria-hidden="true">
-    <button class="close" aria-label="Fechar">✕</button>
-    <img src="" alt="" id="modal-img">
-  </div>
-
-  <script src="script.js"></script>
 </body>
-              </html>
+</html>
+
               
