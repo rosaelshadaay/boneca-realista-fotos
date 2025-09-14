@@ -225,4 +225,10 @@ h1, h2, h3 {
   }
 }
 
+/* Fundo degradê para o site */
+body {
+  background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
+  /* roxo claro → marfim → dourado */
+  background-attachment: fixed; /* mantém o degradê fixo ao rolar a página */
+}
 
