@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,12 +10,12 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #d8c7f0; /* roxo claro */
+      background-color: #fdfcf8; /* fundo marfim suave */
       color: #3d0066;
       text-align: center;
     }
     header {
-      background-color: #fffaf0; /* amarelo marfim */
+      background-color: #d8c7f0; /* roxo claro */
       padding: 20px;
       border-bottom: 5px solid gold;
     }
@@ -24,6 +25,26 @@
     h1 {
       color: #3d0066;
       margin-top: 10px;
+    }
+    h2 {
+      color: #3d0066;
+      margin-top: 30px;
+    }
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
     }
     .contatos {
       margin: 30px auto;
@@ -51,15 +72,36 @@
 </head>
 <body>
   <header>
-    <!-- Logo já está no repositório -->
     <img src="1000061260.png" alt="Logo Elshadday Bonecas">
     <h1>Elshadday Bonecas de Pano Realistas</h1>
   </header>
 
   <main>
-    <h2>Bem-vinda(o) ao nosso ateliê 💜</h2>
-    <p>Bonecas de pano realistas, feitas à mão com carinho e dedicação.</p>
+    <h2>Nossas Categorias</h2>
+    <div class="categorias">
+      <div class="card">
+        <img src="foto1.jpg" alt="Bonecas baseadas em foto">
+        <h3>Baseadas em Foto</h3>
+        <p>Bonecas feitas a partir de fotos reais, com riqueza de detalhes.</p>
+      </div>
+      <div class="card">
+        <img src="foto2.jpg" alt="Bonecas para brincar">
+        <h3>Bonecas para Brincar</h3>
+        <p>Bonecas seguras e fofas, perfeitas para crianças.</p>
+      </div>
+      <div class="card">
+        <img src="foto3.jpg" alt="Bonecas modeladas">
+        <h3>Modeladas e Estruturadas</h3>
+        <p>Bonecas especiais, com estrutura e modelagem exclusiva.</p>
+      </div>
+      <div class="card">
+        <img src="foto4.jpg" alt="Bonecos temáticos">
+        <h3>Bonecos Temáticos</h3>
+        <p>Natal, personagens e outras criações temáticas.</p>
+      </div>
+    </div>
 
+    <h2>Entre em Contato</h2>
     <div class="contatos">
       <a class="whatsapp" href="https://wa.me/5551981071761" target="_blank">WhatsApp</a>
       <a class="instagram" href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank">Instagram</a>
