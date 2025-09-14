@@ -87,4 +87,20 @@ body{
   .wrap{padding:16px}
   .hero-left h1{font-size:1.35rem}
   .hero-img{height:260px}
-                }
+                }/* Estilo da logo */
+.logo {
+  display: block;
+  margin: 0 auto 15px;   /* centralizada e com espaço embaixo */
+  max-width: 150px;      /* tamanho padrão (celular) */
+  height: auto;
+  border-radius: 10px;   /* cantos arredondados */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2); /* sombra suave */
+}
+
+/* Ajuste para telas maiores (computador) */
+@media (min-width: 768px) {
+  .logo {
+    max-width: 250px;   /* aumenta em telas grandes */
+  }
+}
+
