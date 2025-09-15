@@ -5,117 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elshadday — Bonecas de Pano Realistas</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Garantia de estilo caso o style.css não carregue */
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
-      margin: 0;
-      text-align: center;
-      color: #3d0066;
-    }
-    header {
-      background-color: #fffaf0;
-      padding: 20px;
-      border-bottom: 5px solid gold;
-    }
-    .logo {
-      display: block;
-      margin: 0 auto 15px;
-      max-width: 150px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    }
-    @media (min-width: 768px) {
-      .logo {
-        max-width: 250px; /* aumenta no computador */
-      }
-    }
-    h1, h2, h3 {
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
-    }
-    .categorias {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .card {
-      background: #fffaf0;
-      border: 2px solid gold;
-      border-radius: 10px;
-      padding: 20px;
-    }
-    .contatos {
-      margin: 30px auto;
-    }
-    .contatos a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .contatos a:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-    .whatsapp { background-color: #25D366; }
-    .instagram { background-color: #E1306C; }
-    .facebook { background-color: #1877F2; }
-    .email { background-color: goldenrod; }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #3d0066;
-      color: white;
-      border-top: 3px solid gold;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Elshadday Bonecas" class="logo">
-    <h1>Elshadday Bonecas de Pano Realistas</h1>
+    <img src="logo.png" alt="Logo Elshadday Bonecas" class="logo fade-in">
+    <h1 class="fade-in">Elshadday Bonecas de Pano Realistas</h1>
   </header>
 
   <main>
-    <h2>Nossas Categorias</h2>
+    <h2 class="fade-in">Nossas Categorias</h2>
     <div class="categorias">
-      <div class="card">
+      <div class="card fade-in">
         <h3>Baseadas em Foto</h3>
         <p>Bonecas feitas a partir de fotos reais, com riqueza de detalhes.</p>
       </div>
-      <div class="card">
+      <div class="card fade-in">
         <h3>Para Brincar</h3>
         <p>Bonecas estruturadas, seguras e cheias de carinho.</p>
       </div>
-      <div class="card">
+      <div class="card fade-in">
         <h3>Modeladas e Estruturadas</h3>
         <p>Bonecas exclusivas, feitas com técnica e amor.</p>
       </div>
-      <div class="card">
+      <div class="card fade-in">
         <h3>Bonecos Temáticos</h3>
         <p>Natal, personagens e outras criações especiais.</p>
       </div>
     </div>
 
-    <h2>Entre em Contato</h2>
+    <h2 class="fade-in">Entre em Contato</h2>
     <div class="contatos">
-      <a class="whatsapp" href="https://wa.me/5551981071761" target="_blank">WhatsApp</a>
-      <a class="instagram" href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank">Instagram</a>
-      <a class="facebook" href="https://facebook.com/RosaGleciBalem" target="_blank">Facebook</a>
-      <a class="email" href="mailto:rosaglecibalem@gmail.com">E-mail</a>
+      <a class="whatsapp fade-in" href="https://wa.me/5551981071761" target="_blank">WhatsApp</a>
+      <a class="instagram fade-in" href="https://instagram.com/elshaddaybonecasdepanorealista" target="_blank">Instagram</a>
+      <a class="facebook fade-in" href="https://facebook.com/RosaGleciBalem" target="_blank">Facebook</a>
+      <a class="email fade-in" href="mailto:rosaglecibalem@gmail.com">E-mail</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Elshadday Bonecas Realistas. Todos os direitos reservados.</p>
+    <p class="fade-in">&copy; 2025 Elshadday Bonecas Realistas. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script das animações -->
+  <script src="script.js"></script>
 </body>
 </html>
-
