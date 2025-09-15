@@ -1,62 +1,55 @@
-/* Reset básico */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BASE ===== */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fffaf0; /* Amarelo marfim */
-  color: #3d0066; /* Roxo escuro */
+  background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
+  color: #3d0066;
   text-align: center;
   line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(180deg, #d8c7f0, #fffaf0); /* Roxo claro -> marfim */
+  background: #fffaf0;
   padding: 20px;
-  border-bottom: 4px solid #ffd700; /* Dourado */
+  border-bottom: 4px solid #ffd700;
 }
 
-header img {
-  max-width: 180px;
+.logo {
+  max-width: 140px; /* celular */
   height: auto;
   margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #3d0066;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== SEÇÕES ===== */
-main {
-  padding: 30px 15px;
-}
-
+/* ===== CATEGORIAS ===== */
 .categoria {
-  background: #fdfdfd;
+  background: #fffaf0;
   margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
-  border: 2px solid #ffd700; /* Dourado */
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.categoria h2 {
-  color: #6a0dad; /* Roxo médio */
+.categoria h3 {
+  color: #6a0dad;
   margin-bottom: 10px;
   font-size: 1.5rem;
-}
-
-.categoria p {
-  font-size: 1rem;
-  margin-bottom: 15px;
 }
 
 /* ===== GALERIA ===== */
@@ -83,32 +76,44 @@ main {
 footer {
   background: #3d0066;
   color: white;
-  padding: 15px;
+  padding: 20px;
   margin-top: 30px;
+  border-top: 3px solid #ffd700;
 }
 
 footer a {
   color: #ffd700;
   font-weight: bold;
   text-decoration: none;
-  margin: 0 5px;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+/* ===== ANIMAÇÕES ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== RESPONSIVIDADE ===== */
 @media (min-width: 768px) {
-  header img {
-    max-width: 220px; /* Logo maior no computador */
+  .logo {
+    max-width: 220px; /* aumenta no PC */
   }
 
   header h1 {
     font-size: 2.2rem;
   }
 
-  .categoria h2 {
+  .categoria h3 {
     font-size: 1.8rem;
   }
 }
