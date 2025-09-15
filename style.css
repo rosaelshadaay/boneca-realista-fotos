@@ -1,140 +1,114 @@
-/* ======== ESTILO BASE ======== */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #d8c7f0 0%, #fffaf0 50%, #ffd700 100%);
-  margin: 0;
+  background-color: #fffaf0; /* Amarelo marfim */
+  color: #3d0066; /* Roxo escuro */
   text-align: center;
-  color: #3d0066;
+  line-height: 1.6;
 }
 
-/* ======== CABEÇALHO ======== */
+/* ===== HEADER ===== */
 header {
-  background-color: #fffaf0;
+  background: linear-gradient(180deg, #d8c7f0, #fffaf0); /* Roxo claro -> marfim */
   padding: 20px;
-  border-bottom: 5px solid gold;
+  border-bottom: 4px solid #ffd700; /* Dourado */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 15px;
-  max-width: 150px;   /* celular */
+header img {
+  max-width: 180px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-}
-
-@media (min-width: 768px) {
-  .logo {
-    max-width: 250px; /* aumenta no PC */
-  }
-}
-
-/* ======== TÍTULOS ======== */
-h1, h2, h3 {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
   margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-}
-
-@media (max-width: 767px) {
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-  h3 { font-size: 1.2rem; }
-}
-
-/* ======== CATEGORIAS ======== */
-.categorias {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.card {
-  background: #fffaf0;
-  border: 2px solid gold;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-}
-
-/* ======== BOTÕES DE CONTATO ======== */
-.contatos {
-  margin: 30px auto;
-}
-
-.contatos a {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 18px;
-  border-radius: 8px;
+header h1 {
+  font-size: 1.8rem;
   font-weight: bold;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: #3d0066;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contatos a:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+/* ===== SEÇÕES ===== */
+main {
+  padding: 30px 15px;
 }
 
-.whatsapp { background-color: #25D366; }
-.instagram { background-color: #E1306C; }
-.facebook { background-color: #1877F2; }
-.email { background-color: goldenrod; }
-
-@media (min-width: 768px) {
-  .contatos a {
-    font-size: 1.1rem;
-    padding: 14px 22px;
-  }
-}
-
-/* ======== RODAPÉ ======== */
-footer {
-  margin-top: 40px;
+.categoria {
+  background: #fdfdfd;
+  margin: 20px auto;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  border: 2px solid #ffd700; /* Dourado */
+}
+
+.categoria h2 {
+  color: #6a0dad; /* Roxo médio */
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.categoria p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
   background: #3d0066;
   color: white;
-  border-top: 3px solid gold;
-}
-/* ======== ANIMAÇÕES ======== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 15px;
+  margin-top: 30px;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Ajustes de tamanho da logo */
-header img {
-  display: block;
-  margin: 0 auto 15px;
-  max-width: 140px; /* tamanho padrão no celular */
-  height: auto;
+footer a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
-/* Em telas maiores (computador) */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVIDADE ===== */
 @media (min-width: 768px) {
   header img {
-    max-width: 200px; /* aumenta um pouco no desktop */
+    max-width: 220px; /* Logo maior no computador */
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .categoria h2 {
+    font-size: 1.8rem;
   }
 }
-
-
-
-
