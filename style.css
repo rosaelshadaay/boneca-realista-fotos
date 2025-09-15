@@ -120,6 +120,21 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Ajustes de tamanho da logo */
+header img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 140px; /* tamanho padrão no celular */
+  height: auto;
+}
+
+/* Em telas maiores (computador) */
+@media (min-width: 768px) {
+  header img {
+    max-width: 200px; /* aumenta um pouco no desktop */
+  }
+}
+
 
 
 
